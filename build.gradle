@@ -45,6 +45,7 @@ repositories {
 
 dependencies {
     implementation 'com.furhatrobotics.furhatos:furhat-commons:2.7.0'
+    implementation "org.zeromq:jeromq:0.5.2"
 }
 
 //These new blocks are needed to package your project into a working skill file.

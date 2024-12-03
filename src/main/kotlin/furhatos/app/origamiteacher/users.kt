@@ -5,3 +5,4 @@ import furhatos.records.User
 
 // Associate an order to a user
 var User.step by NullSafeUserDataDelegate { 0 }
+var User.FurhatAskedAttention by NullSafeUserDataDelegate { false }

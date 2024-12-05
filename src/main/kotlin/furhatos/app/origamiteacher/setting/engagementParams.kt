@@ -19,3 +19,8 @@ val steps = listOf("Start by grabbing your piece of paper",
         "Fold the top flap over the bottom",
         "Turn the fish over and you’re done",
         "You can draw the eye and some stripes to make it look nice")
+
+val attention_calls = listOf("Can you please pay attention?",
+        "Please remember to pay attention",
+        "I thought I asked you to pay attention...",
+        "Why won't you pay attention to me?")

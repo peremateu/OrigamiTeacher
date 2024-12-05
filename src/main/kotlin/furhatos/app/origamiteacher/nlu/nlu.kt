@@ -21,6 +21,7 @@ class RequestNextStep: Intent() {
             "I'm done",
             "I have done it",
             "Continue",
-            "Okay")
+            "Okay",
+            "I have it")
     }
 }

@@ -14,11 +14,11 @@ val Init : State = state() {
         furhat.voice = Voice("Alex")
         /** start the interaction */
         onButton("Encouragement", color = Color.Green, size = Size.Large) {
-            encouragement = 1
+            encouragement = 0
             goto(Idle)
         }
         onButton("No encouragement", color = Color.Red, size = Size.Large) {
-            encouragement = 0
+            encouragement = 1
             goto(Idle)
         }
 

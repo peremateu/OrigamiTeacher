@@ -1,5 +1,6 @@
 package furhatos.app.origamiteacher.setting
 
+var encouragement = 0
 val maxNumberOfUsers = 1
 val distanceToEngage = 1.5
 
@@ -20,7 +21,9 @@ val steps = listOf("Start by grabbing your piece of paper",
         "Turn the fish over and you’re done",
         "You can draw the eye and some stripes to make it look nice")
 
-val attention_calls = listOf("Can you please pay attention?",
-        "Please remember to pay attention",
-        "I thought I asked you to pay attention...",
-        "Why won't you pay attention to me?")
+val comments = mapOf(0 to listOf("This is a fun project we're doing together, so no need to stress about finishing it perfectly, we're just here to have a good time! So now…",
+                                "Origami is the Japanese art of folding paper into shapes. The word comes from 'ori' meaning folding and 'kami' meaning paper. So now…"),
+        11 to listOf("You’re actually doing great, this step looks really good so far!",
+                        "Did you know that some fish can recognize faces for months at a time?"),
+        16 to listOf("Finishing a task, no matter how it turns out, is a win. You’ve done great!",
+                "I have no more instructions or facts to share. The task is complete."))

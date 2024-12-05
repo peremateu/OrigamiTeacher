@@ -18,8 +18,7 @@ val steps = listOf("Start by grabbing your piece of paper",
         "Rotate the triangle left 90° counter-clockwise",
         "Fold the bottom corner up a little above the center",
         "Fold the top flap over the bottom",
-        "Turn the fish over and you’re done",
-        "You can draw the eye and some stripes to make it look nice")
+        "Turn the fish over and you’re done")
 
 val comments = mapOf(0 to listOf("This is a fun project we're doing together, so no need to stress about finishing it perfectly, we're just here to have a good time! So now…",
                                 "Origami is the Japanese art of folding paper into shapes. The word comes from 'ori' meaning folding and 'kami' meaning paper. So now…"),

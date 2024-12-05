@@ -50,10 +50,18 @@ val GivingSteps = state(parent = Parent) {
         val step = users.current.step
         if (step in comments) {
             furhat.say(comments[step]?.get(encouragement) ?: "There was an error (this will never happen here)")
+            delay(1000)
+        }
+        furhat.attend(Location.Down)
+        furhat.say(steps[step])
+        furhat.attend(users.current)
+        if(users.current.step == steps.size - 1) {
+            delay(500)
+            furhat.say("If you want, you can draw the eye and some stripes to make it look nice, Thank you for doing this origami with me! Goodbye!")
+            terminate()
+        }else{
             furhat.listen()
         }
-        furhat.say(steps[step])
-        furhat.listen()
 
         /* add the head movements */
     }

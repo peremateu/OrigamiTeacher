@@ -19,9 +19,11 @@ class RequestNextStep: Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf("Next step",
             "I'm done",
+            "Done",
             "I have done it",
             "Continue",
             "Okay",
-            "I have it")
+            "I have it",
+            "Next")
     }
 }

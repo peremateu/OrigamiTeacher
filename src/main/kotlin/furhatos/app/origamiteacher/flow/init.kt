@@ -7,20 +7,26 @@ import furhatos.app.origamiteacher.setting.maxNumberOfUsers
 import furhatos.flow.kotlin.*
 import furhatos.flow.kotlin.voice.Voice
 
+//val myButton = Button("My First Button")
+//val myButton = Button("My First Button")
+
 val Init : State = state() {
     init {
         /** Set our default interaction parameters */
         users.setSimpleEngagementPolicy(distanceToEngage, maxNumberOfUsers)
         furhat.voice = Voice("Alex")
         /** start the interaction */
-        onButton("Encouragement", color = Color.Green, size = Size.Large) {
-            encouragement = 0
-            goto(Idle)
-        }
-        onButton("No encouragement", color = Color.Red, size = Size.Large) {
-            encouragement = 1
-            goto(Idle)
-        }
 
+
+
+    }
+    onButton("Encouragement", color = Color.Green, size = Size.Large) {
+        encouragement = 0
+        goto(Idle)
+    }
+
+    onButton("No encouragement", color = Color.Red, size = Size.Large) {
+        encouragement = 1
+        goto(Idle)
     }
 }

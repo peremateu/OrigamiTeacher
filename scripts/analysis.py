@@ -15,7 +15,7 @@ columns_of_interest = ["Like_Dislike", "Unfriendly_Friendly", "Unkind_Kind",
 
 results = {}
 for column in columns_of_interest:
-    stat, p_value = mannwhitneyu(group_ne[column], group_e[column], alternative="two-sided")
+    stat, p_value = mannwhitneyu(group_ne[column], group_e[column], alternative="greater")
     results[column] = {"U-statistic": stat, "p-value": p_value}
 
 # Convert results to a DataFrame for better readability

@@ -14,29 +14,27 @@ columns_of_interest = ["Like_Dislike", "Unfriendly_Friendly", "Unkind_Kind",
 likert_data = data.melt(id_vars="Group", value_vars=columns_of_interest, 
                         var_name="Metric", value_name="Score")
 
-# Calculate percentages for each rating per group and metric
+# Group and count raw responses
 likert_summary = (
     likert_data.groupby(["Metric", "Group", "Score"])
     .size()
     .reset_index(name="Count")
-    .pivot_table(index=["Metric", "Score"], columns="Group", values="Count", fill_value=0)
+    .pivot(index=["Metric", "Score"], columns="Group", values="Count")
+    .fillna(0)
 )
-
-# Normalize counts to percentages
-likert_summary["Total"] = likert_summary.sum(axis=1)
-likert_summary["Encouragement"] = (likert_summary["Encouragement"] / likert_summary["Total"]) * 100
-likert_summary["No Encouragement"] = -(likert_summary["No Encouragement"] / likert_summary["Total"]) * 100
 
 # Plot diverging stacked bar chart for each metric
 for metric in columns_of_interest:
     metric_data = likert_summary.xs(metric, level="Metric").reset_index()
+    metric_data["No Encouragement"] = -metric_data["No Encouragement"]  # Invert No Encouragement values for diverging effect
+    
     plt.figure(figsize=(10, 6))
     plt.barh(metric_data["Score"], metric_data["Encouragement"], color="lightblue", label="Encouragement")
     plt.barh(metric_data["Score"], metric_data["No Encouragement"], color="salmon", label="No Encouragement")
-    plt.axvline(0, color="black", linewidth=0.8)
+    plt.axvline(0, color="black", linewidth=0.8)  # Add vertical line at 0
     plt.title(f"Diverging Stacked Bar Chart for {metric.replace('_', ' ')}")
-    plt.xlabel("Percentage (%)")
+    plt.xlabel("Count")
     plt.ylabel("Likert Score (1-5)")
-    plt.legend()
+    plt.legend(loc="upper right")
     plt.tight_layout()
     plt.show()

@@ -1,64 +1,67 @@
-# Impact of Robot Encouragement on User Willingness to Re-engage with the Robot in Task Collaboration
+# Impact of Robot Encouragement on User Perception in Task Collaboration
 
-## About The Project
+## 🧠 About the Project
 
-Encouragement has been shown to enhance engagement, motivation, and task performance. This project explores whether these effects persist when encouragement is provided by a social robot, specifically the Furhat robot. Participants are tasked with folding an origami figure under two experimental conditions:
+Encouragement has been shown in psychological and educational contexts to improve motivation, performance, and engagement. This study explores whether these benefits extend to **human-robot interaction (HRI)** — specifically, whether **encouragement from a social robot** affects how users perceive the robot during a collaborative task.
 
-1. **Encouragement Condition**: The robot provides positive feedback and supportive cues.
-2. **No Encouragement Condition**: The robot delivers task-focused instructions without encouragement.
+Using the **Furhat social robot**, we designed an experiment where participants completed an origami folding task under one of two conditions:
 
-### Objectives
-- Assess if robot encouragement influences willingness to re-engage with the robot.
-- Determine if encouragement affects task completion time.
+1. **Encouragement Condition** – the robot provided verbal positive reinforcement during the task.
+2. **No Encouragement Condition** – the robot gave the same task instructions without emotional or encouraging language.
 
-### Key Hypotheses
-- Encouragement leads to faster task completion.
-- Encouragement increases willingness to interact with the robot again.
+This project aimed to understand whether subtle social cues, such as encouragement, affect **likability**, a critical component of human-robot rapport.
 
-## Methodology
+---
+
+## 🎯 Objectives
+
+- Determine whether robot encouragement improves **user-perceived likability**.
+- Examine how robot social behaviors affect **user experience** in task-oriented collaboration.
+- Provide design implications for the development of **socially intelligent robots** in domains like education, customer service, and therapy.
+
+---
+
+## 🧪 Methodology
 
 ### Participants
-- 20-30 participants recruited from the KTH University community.
-- Random assignment to one of two conditions: Encouragement or No Encouragement.
+- 18 KTH students (9 per condition)  
+- Age range: 18–44 (M = 23.44)  
+- Mixed experience with robots; most were origami beginners
 
 ### Experimental Setup
-- **Robot**: Furhat social robot with speech and non-verbal behaviors.
-- **Task**: Participants fold a simple origami figure following the robot’s step-by-step instructions.
-  - Encouragement Condition: Positive feedback and engaging behaviors.
-  - No Encouragement Condition: Minimal feedback and task-focused interaction.
+- **Robot**: [Furhat](https://furhatrobotics.com/) — a social robot with facial gestures, head movements, and natural language capabilities.
+- **Task**: Participants folded an origami fish, following the robot’s verbal step-by-step instructions. Visual aids were provided via screen-sharing (wizarded) for clarity.
+- **Encouragement Examples**: “You’re doing great!”, “That looks really good so far.”
+- **Control Condition**: Same task instructions, but encouragement replaced with neutral content (e.g., origami trivia), keeping word count balanced.
 
 ### Procedure
-1. Participants sign a consent form and receive an introduction.
-2. They perform the origami task guided by the robot.
-3. Interaction lasts 5-10 minutes.
-4. Post-task survey measures willingness to re-engage and gathers qualitative feedback.
+1. Participants were briefed and signed consent forms.
+2. They interacted with the robot during the task (~10–15 minutes).
+3. After completion, participants filled out the **Godspeed Questionnaire** (Likability subscale).
+4. Debriefing followed to explain the study's purpose and answer questions.
 
 ### Measures
-- **Primary**:
-  - Willingness to re-engage (Yes/No).
-  - Task completion time (in seconds).
-- **Secondary**:
-  - Open-ended feedback on the robot interaction experience.
+- **Primary**: Robot **likability** via 5-point Likert scales (e.g., Dislike–Like, Unfriendly–Friendly)
+- **Secondary**: Open-ended qualitative feedback (optional)
 
 ### Analysis
-- Chi-square test for willingness to re-engage.
-- T-test for task completion time.
-- Thematic analysis for qualitative feedback.
+- Independent-sample **t-test** comparing overall likability scores between the two conditions.
 
-## Results
-Pending final analysis, the study aims to provide insights into:
-- The role of robot encouragement in enhancing task efficiency and engagement.
-- Patterns in user feedback regarding robot interaction.
+---
 
-## Contributors
-- Tobias Carlsson
-- Fatemeh Abdollahnazhad
-- Pere Mateu Raventós
+## 👥 Contributors
+- Tobias Carlsson  
+- Fatemeh Abdollahnazhad  
+- Pere Mateu Raventós  
 - Wei Kang Wong
 
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
+---
 
-## Acknowledgments
-- Furhat Robotics: [Furhat Website](https://furhatrobotics.com)
-- References: Research studies on encouragement in HRI and education.
+## 📄 License
+Distributed under the MIT License. See `LICENSE` for details.
+
+---
+
+## 🙏 Acknowledgments
+- Thanks to [Furhat Robotics](https://furhatrobotics.com) for their support and platform  
+- Inspired by foundational work in HRI, educational psychology, and affective computing
